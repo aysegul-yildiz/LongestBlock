@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class LongestBlockSameCase
+{
+    public static void main(String[] args) 
+    {
+      
+        String input;
+        Scanner scan;
+        scan = new Scanner( System.in);
+        
+        int i = 0, zero = 0; 
+        int maxLength = 0; 
+        System.out.print( "Input string: " );
+        input=scan.nextLine();
+        scan.close();
+
+        while (zero <= input.length())  
+        {
+            if (zero < input.length() && input.charAt(zero) != ' ') 
+            { 
+                zero++; 
+            }  
+            else
+            { 
+                int length = zero - i; 
+
+                if (length > maxLength)  
+                { 
+                    maxLength = length; 
+                  
+                } 
+                zero++; 
+                i = zero; 
+            } 
+        } 
+         
+        System.out.print("-> longest block is "+ maxLength); 
+    }
+}
