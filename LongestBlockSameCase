@@ -1,8 +1,6 @@
 import java.util.Scanner;
-public class LongestBlockSameCase
-{
-    public static void main(String[] args) 
-    {
+public class LongestBlockSameCase{
+    public static void main(String[] args) {
       
         String input;
         Scanner scan;
@@ -14,18 +12,14 @@ public class LongestBlockSameCase
         input=scan.nextLine();
         scan.close();
 
-        while (zero <= input.length())  
-        {
-            if (zero < input.length() && input.charAt(zero) != ' ') 
-            { 
+        while (zero <= input.length())  {
+            if (zero < input.length() && input.charAt(zero) != ' ') { 
                 zero++; 
             }  
-            else
-            { 
+            else{ 
                 int length = zero - i; 
 
-                if (length > maxLength)  
-                { 
+                if (length > maxLength)  { 
                     maxLength = length; 
                   
                 } 
@@ -33,7 +27,6 @@ public class LongestBlockSameCase
                 i = zero; 
             } 
         } 
-         
         System.out.print("-> longest block is "+ maxLength); 
     }
 }
